@@ -1,0 +1,25 @@
+{
+  "name": "@focusflow/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=../.env src/index.ts",
+    "start": "NODE_ENV=production tsx --env-file-if-exists=../.env src/index.ts",
+    "seed": "tsx --env-file-if-exists=../.env src/seed.ts",
+    "test": "node --import tsx --test --test-reporter=spec test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.14.0",
+    "@focusflow/shared": "0.1.0",
+    "express": "^5.1.0",
+    "tsx": "^4.20.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.9.0"
+  }
+}
